@@ -1,0 +1,537 @@
+@import 'config'; 
+@import 'product';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    font-family: proxima-nova, sans-serif;
+    font-size: 16px;
+}
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: $website-width;
+    margin: auto;
+}
+
+.label{
+    background-color: $alabasterr;
+    color: $oxfort-blue;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+//section 1
+.offer-banner{
+    background-color: $cape-palliser;
+    color: $beige;
+    height: 40px;
+    text-align: center;
+    padding: 5px 0;
+}
+//end of section 1
+
+//section 2  header
+header{
+    background-image: url(../images/updated_Header.png);
+    background-repeat: no-repeat;
+    background-position: 15% 30%;
+  
+    .top-header{
+        padding: 58px 84px 0 84px;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-areas: 
+        'top-col-1 top-col-2 top-col-3'
+        'navigation navigation navigation';
+        align-items: center;
+
+        a{
+            color: $oxfort-blue;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .top-col-1{
+            grid-area: top-col-1;
+            text-align: left;
+            //border: 1px solid red;
+            a{
+                padding-right: 46px;
+            }
+            
+        }
+        .top-col-2{
+            grid-area: top-col-2;
+            text-align: center;
+           // border: 1px solid firebrick;
+            font-size: 32px;
+            color: $oxfort-blue;
+            letter-spacing: 1.6;
+            font-weight: normal;
+        }
+        .top-col-3{
+            grid-area: top-col-3;
+            text-align: right;
+           // border: 1px solid red;
+            
+            a{
+                padding-left: 46px;
+            }
+            i{
+                color: $oxfort-blue;
+            }
+        }
+        .navigation{
+           // border: 2px solid violet;
+            grid-area: navigation;
+            
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li{
+                    padding: 5px 40px;
+                    
+                    a{
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        font-weight: normal;
+                        letter-spacing: 0.8;                        
+                    }
+
+                    &:hover{
+                        background-color: $athens-gray;
+                    }
+
+                    
+                }
+                
+            }
+
+            .active-link{
+                border-bottom: 4px solid $cape-palliser;
+            }
+        }
+    }
+}
+
+
+.menu-icon{
+    display: none;
+}
+//end of section 2
+
+//section 3 hero banner
+.hero-banner{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+   // justify-content: space-between;
+    height: 525px;
+
+    &-text{
+       // border: 1px solid gray;
+        padding-left: 139px;
+        width: 40%;
+        
+        h1{
+            font-size: 48px;
+            text-align: left;
+            color: $oxfort-blue;
+            line-height: 58px;
+            margin:14px 0;
+        }
+        p{
+            font-size: 16px;
+            color: $oxfort-blue;
+            margin-bottom: 28px;
+        }
+
+        a{
+            background: transparent;
+            color: $rangitoto;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid $oxfort-blue;
+            padding: 10px 40px;
+        }
+    }
+
+    &-img{
+       // border: 1px solid red;
+        width: 60%;
+        height: 500px;
+       // background-image: url(../images/plant.png), url(../images/plant-1.png);        
+       // background-repeat: no-repeat no-repeat;
+       // background-position: -25% 60% , 60% -50%;
+        text-align: center;
+        position: relative;
+
+        .img-1{
+            width: 280px;
+            position: absolute;
+            top: 2%;
+            left: 40%;
+        }
+
+        .img-2{
+            width: 400px;
+            position: absolute;
+            top: 20%;
+            left: 5%;
+        }
+
+        .img-3{
+            width: 450px;
+            position: absolute;
+            top: 5%;
+            left:20%;
+        }
+    }
+    
+}
+//end of section 3
+
+
+//section 4
+.secondary-banner{
+height: 141px;
+padding: 40px  0px;
+text-align: center;
+border: 1px solid $como;
+background-color: $athen;
+color: $oxfort-blue;
+    h4{
+        font-size: 28px;
+        font-weight: 900;
+    }
+}
+//end of section 4
+
+//section 5 product teaser (section 7 and section 9)
+.product-teaser{
+    background-color: $athens-gray;
+    padding: 82px 139px;
+
+    .left-side{
+        text-align: left;
+        margin-bottom: 29px;
+    }
+    .right-side{
+        text-align: right;
+        margin-bottom: 29px;
+    }
+    a{
+        font-size: 14px;
+        color: $rangitoto;
+        font-weight: 900;
+    }
+}
+//end of section 5 (section 7 and section 9)
+
+//section 6 teaser and section 8 teaser
+.teaser{
+   
+    h2{
+        font-size: 40px;
+        color: $white;
+        font-weight: 900;
+    }
+
+    p{
+        font-size: 16px;  
+        color: $white;   
+        margin-bottom: 60px;   
+    }
+
+    a{
+        display: inline-block;
+       // max-width: 176px;
+        height: 40px;
+        background: transparent;
+        
+    }
+
+    &-dark{
+        background-color: $como;
+        padding: 221px 65px 215px 137px;
+        a{
+            border: 1px solid $white;
+            color: $white;
+            padding: 8px 50px;
+            font-weight: bold;
+        }
+    }
+    &-img{
+        height: 726px;
+        background-image: url('../images/man-in-blue-top-2830332.png');
+        background-repeat: no-repeat;
+        background-position: 15% 25%;
+    }
+    &-light{
+        height: 667px;
+        background-color: $siler-rust;
+        padding: 221px 81px 215px 137px;
+
+        a{
+            border: 1px solid $bordercolor;
+            color: $rangitoto;
+            padding: 8px 50px;
+            font-weight: bold;
+        }
+
+        &-img{
+            height: 667px;
+            background-image: url('../images/sincerely-media-CjHJbp3zInA-unsplash.png');
+            background-repeat: no-repeat;
+            background-position: 25% 60%;  
+        }
+    }
+}
+//end of section 6 teaser and section 8 teaser
+
+//bottom section (product teaser and image tiles
+.bottom-background{
+    background-color: $alabasterr;
+}
+
+//section 10  image tiles
+.image-tiles{
+    background-color: $alabasterr;
+    text-align: center;
+    padding: 90px  232px 150px 232px;
+    color: $oxfort-blue;
+
+    h4{
+        font-size: 28px;
+        font-weight: bold ;
+        line-height: 34px;
+        margin-bottom: 12px;
+    }
+   p{
+    margin-bottom: 60px;
+   }
+
+   .tiles{
+   // border: 1px solid red;
+    margin: 5px;
+    max-width: 300px;
+    height: 400px;
+   
+
+        .tile-img{
+            max-width: 240px;
+            margin: auto;   
+           // border: 1px solid orange;
+            height: 265px;
+            margin-bottom: 10px;
+        }
+
+        h5{
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+            color: $rangitoto;
+        }
+    }
+
+   
+
+}
+//end of section 10 
+
+//section 11 feature banner
+ .feature-banner{
+    background-color: $athens-gray;
+    padding: 60px 230px ;
+    height: 234px;
+    //border: 1px solid gold;
+    margin: auto;
+    &-row{
+        //border: 1px solid red;
+        text-align: center;
+        margin: auto;
+    }
+    &-details{
+        max-width: 270px;
+        text-align: center;
+       // border: 1px solid green;
+       i{
+        color: $siler-rust;
+       }
+        p{
+            color: $oxfort-blue;
+            font-weight: 600;
+        }
+        a{
+            font-size: 12px;
+            color: $oxfort-blue;
+            text-decoration: underline;
+        }
+
+    }
+ }
+//end of section 11
+
+//section 12 newsletter
+.newsletter{
+    background-color: $white;
+    height: 180px;
+    padding: 35px 137px 40px 137px;
+    position: relative;
+    border: 1px solid $oxfort-blue;
+
+    .newsletter-col-1{
+        font-size: 32px;
+        font-weight: bold;
+        color: $oxfort-blue;
+        padding-right: 20px;
+
+        ::after{
+            content: "";
+            height: 100px;
+            width: 2px;
+            background-color:$siler-rust;
+            position: absolute;
+            top: 40px;
+           left:30%;
+        }
+    }
+
+    .newsletter-col-2{    
+        padding: 20px 20px;    
+        font-size: 16px;
+        color: $oxfort-blue;
+    }
+    .newsletter-form{
+        padding-top: 20px;
+        padding-left: 50px;
+        max-width: 400px;
+        //border: 1px solid red;
+        input{
+            height: 40px;
+            border: 1px solid $cape-palliser;
+            width: 70%;
+        }
+        button{
+            background: $cape-palliser;
+            height: 40px;
+            color: $beige;
+            outline: none;
+            border: 1px solid $cape-palliser;
+            padding: 10px 20px;
+            margin-left: -10px;
+        }
+    }
+}
+//end of section 12
+
+//section 13 footer
+footer{
+    background-color: $oxfort-blue;
+    color: $white;
+    padding: 120px 137px 116px 137px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'column1 column2 column3 column4'
+    'bottomborder bottomborder bottomborder bottomborder'
+    'copyrights copyrights copyrights copyrights'
+    'copylinks copylinks social social'; 
+    grid-row-gap: 20px;
+  
+
+    .column-1{
+        grid-area: column1;
+        h2{ font-family: Somatic-Rounded, sans-serif;
+            font-size: 54px;
+            font-weight: normal;
+        }
+        p{
+            margin-bottom: 36px;
+        }
+        form{
+            max-width: 400px;
+            //border: 1px solid red;
+            input{
+                width: 75%;
+                border: 1px solid $white;
+                background: transparent;
+                height: 40px;
+                color: $white;
+                padding-left: 10px;
+            }
+            ::placeholder{
+                color: $white;
+            }
+            
+            button{
+                height: 40px;
+                background: transparent;
+                color: $white;
+                border: 1px solid $white;
+                border-left: none;
+                padding: 0 15px;
+                margin-left: -8px;
+            }
+        }
+    }
+    .column-2{
+        grid-area: column2;
+    }
+    .column-3{
+        grid-area: column3;
+    }
+    .column-4{
+        grid-area: column4;
+    }
+    .column-2, .column-3, .column-4{
+        p{
+            font-weight: 600;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+        a{
+            color: $white;
+        }
+    }
+    .bottomborder{
+        grid-area: bottomborder;
+        border-bottom: 1px solid $white;
+        margin: 10px 0;
+    }
+    .copyrights{
+        grid-area: copyrights;
+        text-transform: uppercase;
+     }
+    .copy-links{
+        grid-area: copylinks;
+       a{ 
+        color: $white;
+        text-decoration: underline;
+        padding-right: 30px; }
+
+    }
+    .social{
+    text-align: right;
+    grid-area: social;
+        i{
+            margin: 0px 20px 0px 20px;
+        }
+    }
+}
+//end of section 13
+
+//import media queries 
+@import 'media';

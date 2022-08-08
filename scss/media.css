@@ -1,0 +1,31 @@
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .navigation {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    background-color: aqua;
+    text-align: center;
+    width: 100%;
+  }
+  .navigation .responsive {
+    display: block;
+  }
+  .feature-banner {
+    max-width: 100%;
+    padding: 60px 60px;
+    height: auto;
+  }
+  .feature-banner-details {
+    margin-bottom: 40px;
+  }
+  footer {
+    padding: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "column2 column3" "column4 column4" "column1 column1" "bottomborder bottomborder" "copyrights copyrights" "copylinks copylinks" "social social";
+    grid-row-gap: 20px;
+  }
+}/*# sourceMappingURL=media.css.map */
